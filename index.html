@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Abraham's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Abraham Post's Portfolio</h1>
+        <img class="pic" src="static/abe.jpg" alt="A picture of my face">
+    </header>
+    <div id="container">
+        <section class="links">
+            <h2 class="title">Personal Links</h2>
+            <a class="link" href="https://github.com/abrahampost"><i class="fab fa-github"></i>&nbsp Github</a>
+            <a class="link" href="https://www.linkedin.com/in/abraham-post/"><i class="fab fa-linkedin"></i>&nbsp
+                LinkedIn</a>
+            <a class="link" href="static/Resume.pdf"><i class="fas fa-file"></i>&nbsp Resume</a>
+        </section>
+        <section class="project-list">
+            <h2 class="title">Projects</h2>
+            <div class="project">
+                <h3 class="title">INLS 572 Class Project</h3>
+                <div class="description">
+                    This is a project I did in my INLS 572 Web Development course.
+                    It is an online portfolio for me to display things about me, and projects
+                    I have worked on, just like this one!
+                </div>
+                <img src="static/Portfolio.PNG" alt="Picture of the website you are currently on!">
+                <a class="link" href="https://abrahampost.github.io/INLS572/"
+                    aria-label="Link to the homepage of this website"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="project">
+                <h3 class="title">My Blog</h3>
+                <div class="description">
+                    I created a blog so that I can post my thoughts about
+                    several different things I am interested in. I designed it
+                    using Semantic UI, and the backend is a Node.js application running
+                    express.js, connected to a postgres database.
+                </div>
+                <img src="static/Blog.PNG" alt="A picture of my blog website">
+                <a class="link" href="http://www.abrahamposts.com" aria-label="Link to my blog"><i
+                        class="fas fa-blog"></i></a>
+            </div>
+            <div class="project">
+                <h3 class="title">MadEyeMoodify</h3>
+                <div class="description">
+                    This is an app I developed at HackNC2018 with several friends of mine. This application
+                    allows a user to log into their Spotify account, and then helps them create playlists
+                    of songs from their library. Unfortunately, Spotify has made a slight change to their
+                    API response and it has introduced a bug, but hopefully this site will be back up and
+                    running soon (I can assure you it worked at the time of the Hackathon!!)!
+                </div>
+                <img src="static/Moodify.PNG" alt="Apicture of my hackathon website">
+                <a class="link" href="http://www.madeyemoodify.com/" aria-label="Link to MadEyeMoodify website">
+                    <i class="fas fa-music"></i></a>
+            </div>
+            <div class="project">
+                <h3 class="title">TinyLisp Programming Language</h3>
+                <div class="description">
+                    An implementation of a Lisp-like Language in Java. It is fully functional,
+                    with the ability to write non-trivial programs. Much of the programming language design
+                    decisions
+                    were modified from <a href="http://www.craftinginterpreters.com">CraftingInterpreters</a>.
+                </div>
+                <img src="static/Lisp.PNG" alt="A picture of the REPL of my programming language">
+                <a class="link" href="https://github.com/abrahampost/TinyLisp"
+                    aria-label="Link to TinyLisp Github Repo"><i class="fas fa-laptop-code"></i></a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Website created in INLS 572 Web Development taught by Joan Boone</p>
+    </footer>
+</body>
+
+</html>

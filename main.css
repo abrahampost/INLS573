@@ -1,0 +1,182 @@
+:root {
+    /*These allow quick changing of themes */
+    --primary: #cbb096;
+    --secondary: #d7cec7;
+    --bright: #76323f;
+    --link-color: rgb(61, 61, 199);
+    --text-color: #0f0f0f;
+    --shadow: #ada7a7;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background: radial-gradient(#c05c6f, #2f050c);
+    font-family: 'Sarabun', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    background: var(--secondary);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+}
+
+header .pic {
+    display: none;
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+}
+
+#aboutme {
+    margin: auto;
+    width: 100%;
+    border-radius: 2em;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links .link {
+    box-sizing: border-box; 
+    padding: 1em;
+    text-align: center;
+    background-color: var(--primary);
+    margin: 1em;
+    border-radius: 2em;
+    width: 90%;
+    flex-grow: 2;
+    text-decoration: none;
+}
+
+#content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section .title {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+section > .title {
+    color: (--text-color);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.project-list .project {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: var(--primary);
+    border-radius: 2em;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    grid-template-areas:
+    "title"
+    "description"
+    "image";
+}
+
+.project-list .project .title { grid-area: title; }
+.project-list .project .description { grid-area: description }
+.project-list .project .link { grid-area: link }
+.project-list .project img { grid-area: image }
+
+.project-list .project .title {
+    margin: .5em;
+    height: auto;
+}
+
+.project-list .project img {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+}
+
+.project-list .project .link {
+    display: none;
+    margin: auto;
+    font-size: 3em;
+}
+
+footer {
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 1em;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 37.5em) {
+    header {
+        height: 15vh;
+    }
+
+    header .pic {
+        display: block;
+    }
+
+    .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .links .link {
+        width: 40%;
+    }
+
+    .project-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project-list .project {
+        max-width: 35%;
+    }
+
+}
+
+@media (min-width: 55em) {
+    .links .link {
+        width: 20%;
+    }
+
+    .project-list .project {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin-bottom: 1.5em;
+        grid-template-areas:
+        "link title"
+        "link description"
+        "image image";
+    }
+
+    .project-list .project .link {
+        display: block;
+    }
+}
