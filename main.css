@@ -102,7 +102,7 @@ section > .title {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
 }
 
 .project-list .project {
@@ -126,6 +126,14 @@ section > .title {
 .project-list .project .title {
     margin: .5em;
     height: auto;
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1.7em;
+    color: var(--text-color);
+}
+
+.project-list .project .title:hover {
+    color: var(--link-color);
 }
 
 .project-list .project img {
@@ -195,6 +203,7 @@ footer p {
     }
 
     .project-list .project {
+        flex: 1 0 auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         margin-bottom: 1.5em;
