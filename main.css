@@ -16,6 +16,24 @@ body {
     font-family: 'Sarabun', sans-serif;
     color: var(--text-color);
 }
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/hero-small.jpg');
+}
+
+#hero-title {
+    color: whitesmoke;
+    font-size: 2em;
+    text-shadow: 0 0 5px #000;    
+}
 
 #container {
     width: 90%;
@@ -76,7 +94,8 @@ section .title {
 }
 
 section > .title {
-    color: (--text-color);
+    color: whitesmoke;
+    text-shadow: 0 0 2px #000;
 }
 
 .project-list {
@@ -133,6 +152,11 @@ footer p {
 }
 
 @media (min-width: 37.5em) {
+    #hero {
+        height: 80vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/hero-medium.jpg');
+    }
+
     header {
         height: 15vh;
     }
@@ -162,6 +186,10 @@ footer p {
 }
 
 @media (min-width: 55em) {
+    #hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/hero.jpg');
+    }    
+
     .links .link {
         width: 20%;
     }
