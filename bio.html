@@ -8,8 +8,9 @@
     <title>Abraham's Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Sarabun:500,700" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -17,12 +18,28 @@
         <h1 class="title">Abraham Post's Portfolio</h1>
         <img class="pic" src="static/abe.jpg" alt="A picture of my face">
     </header>
+    <nav>
+        <div id="big-nav">
+            <a class="menu-item" href="index.html">Home</a>
+            <a class="menu-item" href="projects.html">Projects</a>
+            <a class="menu-item" href="#">Biography</a>
+        </div>
+        <div id="small-nav">
+            <div id="expander"><i class="fas fa-bars"></i></div>
+            <div class="dropdown">
+                <a class="menu-item" href="index.html">Home</a>
+                <a class="menu-item" href="projects.html">Projects</a>
+                <a class="menu-item" href="#">Biography</a>
+            </div>
+        </div>
+    </nav>
     <div id="container">
         <div id="jumbotron">
             <picture>
                 <source media="(min-width: 55em)" srcset="static/Family.jpg">
                 <source media="(min-width: 37.5em)" srcset="static/TeenagerAbe.jpg">
-                <img src="static/ToddlerAbe.jpg" id="grow-up" alt="A picture of me as a toddler, teenager, and UNC student depending on screen size.">
+                <img src="static/ToddlerAbe.jpg" id="grow-up"
+                    alt="A picture of me as a toddler, teenager, and UNC student depending on screen size.">
             </picture>
             <div class="titles">
                 <h2 class="main heading">About Me</h2>
@@ -49,7 +66,8 @@
                     in USTA tournaments until I was 14, and then played several years of high school tennis.
                     I put the game down for a few years, but am now picking it back up again with a renewed passion!
                 </p>
-                <img src="static/tennis.jpg" alt="A picture of me playing in a charity tennis tournament in high shool.">
+                <img src="static/tennis.jpg"
+                    alt="A picture of me playing in a charity tennis tournament in high shool.">
             </div>
             <div class="life-piece">
                 <h3 class="heading">Computer Science</h3>
@@ -69,7 +87,8 @@
                     tournaments
                     all over the Southeast. I have even won some money!
                 </p>
-                <img src="static/pickleball.jpg" alt="A picture of a me on the medal stand after a tournament with my dad.">
+                <img src="static/pickleball.jpg"
+                    alt="A picture of a me on the medal stand after a tournament with my dad.">
             </div>
             <div class="life-piece">
                 <h3 class="heading">Golf</h3>

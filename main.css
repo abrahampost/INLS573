@@ -4,10 +4,11 @@
     --secondary: #374A67;
     --tertiary: #44BBA4;
     --bright: #E7BB41;
+    --shadowed-bright: rgb(201, 167, 73);
     --link-color: #44BBA4;
     --light: #E7E5DF;
     --text-color: rgb(77, 100, 136);
-    --shadow: #828080;
+    --shadow: #828080a6;
 }
 
 html,
@@ -18,6 +19,57 @@ body {
     font-family: 'Sarabun', sans-serif;
     color: var(--text-color);
 }
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--light);
+    color: var(--link-color);
+    z-index: 1000;
+}
+
+#big-nav {
+    display: none;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+    justify-items: stretch;
+    height: 8vh;
+}
+
+#big-nav .menu-item {
+    font-size: 1.5em;
+    height: 100%;
+    width: 20%;
+}
+
+#small-nav {
+    padding: 3px 3px 3px 15px;
+    font-size: 2em;
+    -webkit-box-shadow: 4px 2px 1px 2px var(--shadow);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    4px 2px 1px 2px var(--shadow);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         4px 2px 1px 2px var(--shadow);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    z-index: 100;
+}
+
+#small-nav .dropdown {
+    display: none;
+    flex-direction: column;
+}
+
+#expander:hover {
+    color: var(--shadowed-bright)
+}
+
+.menu-item {
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: var(--shadowed-bright);
+}
+
 #hero {
     display: flex;
     justify-content: center;
@@ -42,6 +94,19 @@ body {
     margin: 0 auto;
     padding: 0;
     padding-bottom: 10px;
+}
+
+#text-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 10px;
+    line-height: 1.2em;
+    font-size: 1.15em;
+}
+
+#text-container > * {
+    margin-bottom: 2em;
 }
 
 header {
@@ -156,11 +221,6 @@ section .title {
     text-align: center;
 }
 
-section > .title {
-    color: whitesmoke;
-    text-shadow: 0 0 2px #000;
-}
-
 .project-list {
     display: flex;
     flex-direction: column;
@@ -215,6 +275,7 @@ footer {
     background-color: var(--secondary);
     text-align: center;
     padding: 1em;
+    color: var(--light);
 }
 
 footer p {
@@ -223,6 +284,11 @@ footer p {
 }
 
 @media (min-width: 37.5em) {
+
+    #text-container {
+        width: 70%;
+    }
+
     #hero {
         height: 80vh;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/hero-medium.jpg');
@@ -295,6 +361,18 @@ footer p {
 }
 
 @media (min-width: 55em) {
+    nav {
+        position: relative;
+    }
+
+    #big-nav {
+        display: flex;
+    }
+
+    #small-nav {
+        display: none;
+    }
+
     #hero {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/hero.jpg');
     }    
