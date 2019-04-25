@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All about berries...</title>
+    <style>
+        *{box-sizing:border-box}body{font:normal 100% Georgia,Helvetica,Times,serif;color:#006400}header{padding:2%;font-size:3em;font-style:italic;text-align:center}section{width:100%;display:flex;flex-wrap:wrap;justify-content:center;margin:0 auto}article{background-color:#b5e6e2;min-width:30%;padding:.625em;margin:2%;display:flex;flex-direction:column}.card-content{display:flex;flex-direction:column;flex-grow:1}img{margin:2% 0;align-self:center;max-width:100%;height:auto}#details1,#details2,#details3{display:none}button{background:#2e8b57;color:#fff;border:none;margin-top:auto;padding:2%}@media screen and (min-width:37.5em){article{width:30%;margin:1%;min-width:0}}
+    </style>
+</head>
+<body>
+    <header>All about berries...</header>
+    <section>
+        <article>
+            <h2>Strawberries</h2>
+            <div class="card-content">
+                <img src="images/strawberries.jpg" alt="Strawberries" />
+                <div>
+                    <p>The garden strawberry is a widely grown hybrid species of the genus Fragaria, collectively known
+                        as the strawberries. It is cultivated worldwide for its fruit.</p>
+                    <p id="details1">It is consumed in large quantities, either fresh or in such prepared foods as
+                        preserves, juice, pies, ice creams, milkshakes, and chocolates. </p>
+                </div>
+                <button id="moreLess1">See more</button>
+            </div>
+        </article>
+        <article>
+            <h2>Blueberries</h2>
+            <div class="card-content">
+                <img src="images/blueberries.jpg" alt="Blueberries" />
+                <div>
+                    <p>Blueberries are perennial flowering plants with blue– or purple–colored berries.</p>
+                    <p id="details2">Commercial "blueberries" – including both wild ('lowbush') and cultivated
+                        ('highbush') blueberries – are all native to North America. The highbush blueberry varieties
+                        were introduced into Europe during the 1930s.</p>
+                </div>
+                <button id="moreLess2">See more</button>
+            </div>
+        </article>
+
+        <article>
+            <h2>Berry Thief</h2>
+            <div class="card-content">
+                <img src="images/squirrel.jpg" alt="Squirrel" />
+                <div>
+                    <p>Squirrels are members of the family Sciuridae, a family that includes small or medium-size
+                        rodents.</p>
+                    <p id="details3">The squirrel family includes tree squirrels, ground squirrels, chipmunks, marmots
+                        (including woodchucks), flying squirrels, and prairie dogs amongst other rodents.</p>
+                </div>
+                <button id="moreLess3">See more</button>
+            </div>
+        </article>
+    </section>
+    <script>
+        function toggleContent() { var e; "moreLess1" == this.id && (e = document.querySelector("#details1")), "moreLess2" == this.id && (e = document.querySelector("#details2")), "moreLess3" == this.id && (e = document.querySelector("#details3")), "See more" == this.textContent ? (e.style.display = "block", this.textContent = "See less") : (e.style.display = "none", this.textContent = "See more") } document.querySelector("#moreLess1").addEventListener("click", toggleContent), document.querySelector("#moreLess2").addEventListener("click", toggleContent), document.querySelector("#moreLess3").addEventListener("click", toggleContent);
+    </script>
+</body>
+</html>
